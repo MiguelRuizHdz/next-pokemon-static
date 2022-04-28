@@ -17,7 +17,6 @@ class MyDocument extends Document {
       <Html lang="es">
         <Head>
           { CssBaseline.flush() }
-          <title>Hola Mundo</title>
         </Head>
         <body>
           <Main />
