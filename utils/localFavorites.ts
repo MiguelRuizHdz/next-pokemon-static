@@ -1,7 +1,7 @@
 
 const toggleFavorite = ( id: number ) => {
 
-    console.log('toggleFavorite llamado');;
+    console.log('toggleFavorite llamado');
 
     let favorites: number[] = JSON.parse( localStorage.getItem('favorites') || '[]');
 
@@ -11,10 +11,20 @@ const toggleFavorite = ( id: number ) => {
         favorites.push( id );
     }
 
-    localStorage.setItem('favorites', JSON.stringify(favorites));
+    localStorage.setItem('favorites', JSON.stringify(favorites));    
+}
+
+const existPokemonInFavorites = ( id: number ): boolean => {
     
+    // Si aun no estamos en el lado del cliente
+    if ( typeof window === 'undefined' ) return false;
+
+    const favorites: number[] = JSON.parse( localStorage.getItem('favorites') || '[]');
+
+    return favorites.includes( id );
 }
 
 export default {
+    existPokemonInFavorites,
     toggleFavorite,
 }
