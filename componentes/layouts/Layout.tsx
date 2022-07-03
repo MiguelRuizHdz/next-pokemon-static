@@ -30,10 +30,10 @@ export const Layout: FC<Props> = ({ children, title }) => {
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content="@miguelruizhdz"></meta>
             <meta name="twitter:creator" content="@miguelruizhdz"></meta>
-            <meta property="twitter:title" content={`Información acerca de ${ title }`} />
-            <meta property="twitter:description" content={`Esta página es sobre ${ title }`} />
-            <meta property="twitter:image" content={`${ origin }/img/banner.jpg`} />
-            <meta property="twitter:image:alt" content="Pokémon" />
+            <meta name="twitter:title" content={`Información acerca de ${ title }`} />
+            <meta name="twitter:description" content={`Esta página es sobre ${ title }`} />
+            <meta name="twitter:image" content={`${ origin }/img/banner.jpg`} />
+            <meta name="twitter:image:alt" content="Pokémon" />
         </Head>
 
         {/* Navbar */}
